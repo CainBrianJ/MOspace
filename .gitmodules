@@ -1,0 +1,3 @@
+[submodule "dspace-xmlui/src/main/webapp/themes/mospace"]
+	path = dspace-xmlui/src/main/webapp/themes/mospace
+	url = git@github.com:umlso/dspace-xmlui-theme-snazy.git
