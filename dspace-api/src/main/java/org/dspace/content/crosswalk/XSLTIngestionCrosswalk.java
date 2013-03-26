@@ -356,6 +356,8 @@ public class XSLTIngestionCrosswalk
                 throw new MetadataValidationException("Got unexpected element in DIM list: "+elt.toString());
             }
         }
+		//complete & close Context
+		context.complete();
     }
 
 }

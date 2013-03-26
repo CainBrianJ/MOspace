@@ -1,3 +1,10 @@
+## Ignore Subversion working directory, oi that would be a mess
+.svn/
+.svn/entries
+
+## Ignore any MVN profiles, no putting passwords in github!
+profiles.xml
+
 ## Ignore the MVN compiled output directories from version tracking
 target/
 

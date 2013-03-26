@@ -189,7 +189,18 @@ it, please enter the types and the actual numbers or codes below.</hint>
          <required></required>
        </field>
 
-       <field>
+        <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>embargo</dc-element>
+         <dc-qualifier>releasedate</dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Embargo Release Date</label>
+         <input-type>date</input-type>
+         <hint>IF you wish to embargo this submission for a period of time, please give the date the embargo should be lifted. If the submission should be embargoed indefinitely, the special value of "forever" may be used.</hint>
+         <required></required>
+       </field>
+
+      <field>
 		 <dc-schema>dc</dc-schema>
          <dc-element>description</dc-element>
          <dc-qualifier></dc-qualifier>
@@ -356,13 +367,13 @@ it, please enter the types and the actual numbers or codes below.</hint>
      -->
    <value-pairs value-pairs-name="common_iso_languages" dc-term="language_iso">
      <pair>
-       <displayed-value>N/A</displayed-value>
-       <stored-value></stored-value>
-     </pair>
-     <pair>
        <displayed-value>English (United States)</displayed-value>
        <stored-value>en_US</stored-value>
       </pair>
+     <pair>
+       <displayed-value>N/A</displayed-value>
+       <stored-value></stored-value>
+     </pair>
      <pair>
        <displayed-value>English</displayed-value>
        <stored-value>en</stored-value>

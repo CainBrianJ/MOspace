@@ -60,31 +60,81 @@ public class PasswordAuthentication
                                    String email)
                                                  throws SQLException
     {
-        // Is there anything set in authentication.password.domain.valid?
-        String domains = ConfigurationManager.getProperty("authentication.password.domain.valid");
-        if ((domains == null) || (domains.trim().equals("")))
+       // Is there anything set in authentication.password.domain.access?
+		log.info(LogManager.getHeader(context, "authenticate", "checking for any access rule violations"));
+        String access = ConfigurationManager.getProperty("authentication.password.domain.access");
+        if ((access == null) || (access.trim().equals("")))
         {
-            // No conditions set, so must be able to self register
+            // No access rules set, so default is, everyone is able to self register
+			log.info(LogManager.getHeader(context, "authenticate", "no value for domain.access set in config, any user is able to self-register"));
             return true;
         }
         else
         {
-            // Itterate through all domains
-            String[] options = domains.trim().split(",");
-            String check;
+			// get the other two config options, allow and deny
+        	String allow = ConfigurationManager.getProperty("authentication.password.domain.allow");
+        	String deny = ConfigurationManager.getProperty("authentication.password.domain.deny");
+
+			// if allow or deny is empty or null, replace with 'ALL' and keep going
+			if ((allow == null) || (allow.trim().equals("")))
+			{
+				// No allow domains set, so default value is 'ALL', everyone is probably able to self register
+				log.info(LogManager.getHeader(context, "authenticate", "no value for domain.allow set in config, using default value of 'ALL', any user is probably able to self-register"));
+				allow = "ALL";
+			}
+   			if ((deny == null) || (deny.trim().equals("")))
+			{
+				// No deny domains set, so default value is 'ALL', it is possible no one will be able to self register
+				log.info(LogManager.getHeader(context, "authenticate", "no value for domain.deny set in config, using default value of 'ALL', it is possible that no one will able to self-register"));
+				deny = "ALL";
+			}
+
+         	// split the strings from the configuration for access, allow, and deny into arrays, using a comma as delimiter
+            String[] accessOptions = access.trim().split(",");
+			String[] allowDomains = allow.trim().split(",");
+			String[] denyDomains = deny.trim().split(",");
+
+            // Itterate through all access options, the order of the array determines the order of precendence
+			String accessRule;
+			String allowCheck;
+			String denyCheck;
             email = email.trim().toLowerCase();
-            for (int i = 0; i < options.length; i++)
+            for (int i = 0; i < accessOptions.length; i++)
             {
-                check = options[i].trim().toLowerCase();
-                if (email.endsWith(check))
-                {
-                    // A match, so we can register this user
-                    return true;
-                }
-            }
-            
-            // No match
-            return false;
+                accessRule = accessOptions[i].trim().toLowerCase();
+
+				if (accessRule.equals("deny")) {
+ 			    // Itterate through all denyDomains
+					for (int d = 0; d < denyDomains.length; d++)
+					{
+						denyCheck = denyDomains[d].trim().toLowerCase();
+						if (email.endsWith(denyCheck) || denyCheck.equals("ALL"))
+						{
+							// A match, so we cannot register this user
+							log.info(LogManager.getHeader(context, "authenticate", "found a denied domain, denyCheck="+denyCheck));
+							return false;
+						}
+					}
+
+				} else if (accessRule.equals("allow")) {
+					// Itterate through all allowDomains
+					for (int a = 0; a < allowDomains.length; a++)
+					{
+						allowCheck = allowDomains[a].trim().toLowerCase();
+						if (email.endsWith(allowCheck) || allowCheck.equals("ALL"))
+						{
+							// A match, so we can register this user
+							log.info(LogManager.getHeader(context, "authenticate", "found an allowed domain, allowCheck="+allowCheck));
+							return true;
+						}
+					}
+
+				}
+           }
+                     
+            // No rules matched, how odd, still, default is to always allow self-registration
+			log.info(LogManager.getHeader(context, "authenticate", "no rules matched, domain is neither valid nor invalid, default is to allow self-registration"));
+            return true;
         }    
     }
 

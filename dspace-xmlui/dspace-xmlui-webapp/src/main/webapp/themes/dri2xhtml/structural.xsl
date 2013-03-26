@@ -2729,8 +2729,7 @@
                 <xsl:text>&amp;dmdTypes=DC</xsl:text>
             </xsl:if>-->
         </xsl:variable>
-        <xsl:comment> External Metadata URL: <xsl:value-of select="$externalMetadataURL"/> </xsl:comment>
-        <li>
+       <li>
             <xsl:attribute name="class">
                 <xsl:text>ds-artifact-item </xsl:text>
                 <xsl:choose>
@@ -2749,8 +2748,7 @@
             <xsl:value-of select="@url"/>
             <!-- No options selected, render the full METS document -->
         </xsl:variable>
-        <xsl:comment> External Metadata URL: <xsl:value-of select="$externalMetadataURL"/> </xsl:comment>
-        <li>
+       <li>
             <xsl:apply-templates select="document($externalMetadataURL)" mode="detailList"/>
             <xsl:apply-templates />
         </li>
@@ -2762,8 +2760,7 @@
             <xsl:value-of select="@url"/>
             <!-- No options selected, render the full METS document -->
         </xsl:variable>
-        <xsl:comment> External Metadata URL: <xsl:value-of select="$externalMetadataURL"/> </xsl:comment>
-        <xsl:apply-templates select="document($externalMetadataURL)" mode="summaryView"/>
+       <xsl:apply-templates select="document($externalMetadataURL)" mode="summaryView"/>
         <xsl:apply-templates />
     </xsl:template>
     
@@ -2773,7 +2770,6 @@
             <xsl:value-of select="@url"/>
             <!-- No options selected, render the full METS document -->
         </xsl:variable>
-        <xsl:comment> External Metadata URL: <xsl:value-of select="$externalMetadataURL"/> </xsl:comment>
         <xsl:apply-templates select="document($externalMetadataURL)" mode="detailView"/>
         <xsl:apply-templates />
     </xsl:template>

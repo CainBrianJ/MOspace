@@ -117,7 +117,7 @@
         <!-- <theme name="Test Theme 2" regex="community-list" path="theme2/"/> -->
 
         <!-- Default theme -->
-        <theme name="Default Reference Theme" regex=".*" path="Reference/" />
+        <!--<theme name="Default Reference Theme" regex=".*" path="Reference/" /> -->
 
         <!-- Mirage theme, @mire contribution of new theme to support easier development and branding -->
         <!-- <theme name="Atmire Mirage Theme" regex=".*" path="Mirage/" /> -->
@@ -127,6 +127,8 @@
 
         <!-- Table based browse display -->
         <!-- <theme name="Table Theme" regex=".*" path="TableTheme/" /> -->
+
+        <theme name="MOspace" regex=".*" path="mospace/" /> -->
 
     </themes>
 </xmlui>

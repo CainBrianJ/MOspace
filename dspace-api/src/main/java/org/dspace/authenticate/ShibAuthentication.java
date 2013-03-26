@@ -11,6 +11,8 @@ import java.sql.SQLException;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Collection;
 import javax.servlet.http.HttpServletResponse;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
 
 import org.apache.log4j.Logger;
 import org.dspace.authorize.AuthorizeException;
@@ -239,6 +241,33 @@ public class ShibAuthentication implements AuthenticationMethod
         {
             affiliations = defaultRoles;
         }
+
+		// begin UM-LSO hack for e-mail domain-based groups /////////////////////////
+
+ 		// grab the e-mail address, filter for just the portion to the right of 
+		// the @, and prepend to affiliations
+ 		String email = null;
+ 
+ 		// we should have an EPerson by now, so let's use it to get the email
+ 		EPerson p = context.getCurrentUser();
+ 		if (p != null) 
+		{
+			email = p.getEmail();
+		}
+ 
+ 		if (email != null)
+		{
+ 			Pattern pCampus = Pattern.compile("^.+\\@(.+)\\.edu");
+			Matcher mCampus = pCampus.matcher(email);
+ 			boolean bCampus = mCampus.matches();
+ 			if (bCampus)
+			{
+ 				String campus = mCampus.group(1);
+ 				affiliations = campus + ";" + affiliations;
+ 			}
+ 		}
+
+		// end UM-LSO hack for e-mail domain-based groups ///////////////////////////
 
         if (affiliations != null)
         {

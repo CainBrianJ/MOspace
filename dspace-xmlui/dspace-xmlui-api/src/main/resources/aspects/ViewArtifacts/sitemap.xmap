@@ -115,6 +115,14 @@ and searching the repository.
                                         <map:parameter name="dspace.dir" value="dspace.dir" />
                                         <map:transform type="Include" src="file://{dspace.dir}/config/news-xmlui.xml" />
                                 </map:act>
+                                
+				<!--
+			    	add links to other repositories
+			    -->
+				<map:act type="DSpacePropertyFileReader">
+					<map:parameter name="dspace.dir" value="dspace.dir" />
+					<map:transform type="Include" src="file://{dspace.dir}/config/other-repositories.xml" />
+				</map:act>
 
                                 <map:serialize type="xml"/>
                         </map:match>
@@ -239,6 +247,17 @@ and searching the repository.
                                 <map:transform type="FeedbackSent"/>
                                 <map:serialize type="xml"/>
                         </map:match>
+                        
+                        <!--
+				Shoehorn in static pages, like help, faq, etc.
+		    	-->
+			<map:match pattern="pages/**">
+				<map:act type="DSpacePropertyFileReader">
+					<map:parameter name="dspace.dir" value="dspace.dir" />
+					<map:transform type="Include" src="file://{dspace.dir}/config/pages/{../1}.xml" />
+				</map:act>
+				<map:serialize type="xml"/>
+			</map:match>
 
                         <!--
                                 The most basic & generic contact us page. It is expected that most
