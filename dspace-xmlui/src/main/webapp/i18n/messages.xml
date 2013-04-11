@@ -330,10 +330,10 @@
 	<message key="xmlui.EPerson.trail_forgot_password">Forgot Password</message>
 
 	<!-- org.dspace.app.xmlui.eperson.CannotRegister.java -->
-	<message key="xmlui.EPerson.CannotRegister.title">Registration unavailable</message>
-	<message key="xmlui.EPerson.CannotRegister.head">Registration unavailable</message>
-	<message key="xmlui.EPerson.CannotRegister.para1">The configuration of this DSpace repository does not allow registration in this context. Please contact the <a href="../contact">site administrator</a> with questions or comments.</message>
-
+	<message key="xmlui.EPerson.CannotRegister.title">Self-Registration unavailable to UM e-mail domains</message>
+	<message key="xmlui.EPerson.CannotRegister.head">Self-Registration unavailable to UM e-mail domains</message>
+	<message key="xmlui.EPerson.CannotRegister.para1">Self-registration is not available to users with e-mail addresses in a University of Missouri domain (for example: @umsystem.edu, @missouri.edu, @umkc.edu, etc.). If you have a valid UM e-mail address, you may use the <a href="shibboleth-login">UM Single Sign On (Shibboleth)</a> to log in to MOspace. Please contact the <a href="../contact">site administrator</a> with questions or comments.</message>
+	
 	<!-- org.dspace.app.xmlui.eperson.EditProfile.java -->
 	<message key="xmlui.EPerson.EditProfile.title_update">Update Profile</message>
 	<message key="xmlui.EPerson.EditProfile.title_create">Create Profile</message>
@@ -387,7 +387,7 @@
 	<message key="xmlui.EPerson.Navigation.profile">Profile</message>
 	<message key="xmlui.EPerson.Navigation.logout">Logout</message>
 	<message key="xmlui.EPerson.Navigation.login">Login</message>
-	<message key="xmlui.EPerson.Navigation.register">Register</message>
+	<message key="xmlui.EPerson.Navigation.register">Register (non-UM only)</message>
 
 	<!-- org.dspace.app.xmlui.eperson.PasswordLogin.java -->
 	<message key="xmlui.EPerson.PasswordLogin.title">Sign in</message>
@@ -399,8 +399,8 @@
 	<message key="xmlui.EPerson.PasswordLogin.password">Password</message>
 	<message key="xmlui.EPerson.PasswordLogin.forgot_link"> Forgot your password?</message>
 	<message key="xmlui.EPerson.PasswordLogin.submit">Sign in</message>
-	<message key="xmlui.EPerson.PasswordLogin.head2">Register new user</message>
-	<message key="xmlui.EPerson.PasswordLogin.para1">Register an account to subscribe to collections for email updates, and submit new items to DSpace.</message>
+	<message key="xmlui.EPerson.PasswordLogin.head2">Register new user (non-UM only)</message>
+	<message key="xmlui.EPerson.PasswordLogin.para1">Register an account to subscribe to collections for email updates. Registration is only required if you are NOT a student of, or employed by, the University of Missouri. If your e-mail address is in a University of Missouri domain (for example: @umsystem.edu, @missouri.edu, @umkc.edu, etc.), you may sign in using the <a href="shibboleth-login">UM Single Sign-on (Shibboleth)</a>.</message>
 	<message key="xmlui.EPerson.PasswordLogin.register_link">Click here to register.</message>
 
 	<!-- org.dspace.app.xmlui.eperson.LDAPLogin.java -->
@@ -418,9 +418,9 @@
 	<message key="xmlui.EPerson.LoginChooser.trail">Choose Login</message>
 	<message key="xmlui.EPerson.LoginChooser.head1">Choose a Login Method</message>
 	<message key="xmlui.EPerson.LoginChooser.para1">Log in via:</message>
-	<message key="org.dspace.authenticate.ShibAuthentication.title">Shibboleth Authentication</message>
+	<message key="org.dspace.authenticate.ShibAuthentication.title">Shibboleth Authentication (for UM students, staff and faculty)</message>
 	<message key="org.dspace.eperson.LDAPAuthentication.title">LDAP Authentication</message>
-	<message key="org.dspace.eperson.PasswordAuthentication.title">Password Authentication</message>
+	<message key="org.dspace.eperson.PasswordAuthentication.title">Password Authentication (non-UM individuals only)</message>
 	<message key="org.dspace.eperson.X509Authentication.title">Web Certificate Authentication</message>
 
 	<!-- org.dspace.app.xmlui.eperson.FailedAuthentication -->
@@ -475,9 +475,9 @@
 	<message key="xmlui.EPerson.StartRegistration.reset_password_for">Reset password for</message>
 	<message key="xmlui.EPerson.StartRegistration.submit_reset">Reset password</message>
 	<message key="xmlui.EPerson.StartRegistration.head2">New user registration</message>
-	<message key="xmlui.EPerson.StartRegistration.para2">Register an account to subscribe to collections for email updates, and submit new items to DSpace.</message>
+	<message key="xmlui.EPerson.StartRegistration.para2">Register an account to subscribe to collections for email updates. Registration is only required if you are NOT a student of, or employed by, the University of Missouri. If your e-mail address is in a University of Missouri domain (for example: @umsystem.edu, @missouri.edu, @umkc.edu, etc.), you may sign in using the <a href="shibboleth-login">UM Single Sign-on (Shibboleth)</a>.</message>
 	<message key="xmlui.EPerson.StartRegistration.email_address">Email Address</message>
-	<message key="xmlui.EPerson.StartRegistration.email_address_help">This address will be verified and used as your login name.</message>
+	<message key="xmlui.EPerson.StartRegistration.email_address_help">This address will be verified and used as your login name. If your e-mail address is in a UM domain (for example: @umsystem.edu, @missouri.edu, @umkc.edu, etc.), you will not be allowed to register. Use <a href="shibboleth-login">UM Single Sign-on (Shibboleth)</a> instead.</message>
 	<message key="xmlui.EPerson.StartRegistration.error_bad_email">Unable to send email to this address.</message>
 	<message key="xmlui.EPerson.StartRegistration.submit_register">Register</message>
 
