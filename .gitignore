@@ -6,6 +6,11 @@ target/
 .project
 .classpath
 
+## Ignore project files created by Sublime
+.sublime-project
+.sublime-workspace
+
+
 ## Ignore project files created by IntelliJ IDEA
 *.iml
 *.ipr
