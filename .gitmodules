@@ -10,3 +10,6 @@
 [submodule "dspace-xmlui/src/main/webapp/themes/dri2xhtml-osu"]
 	path = dspace-xmlui/src/main/webapp/themes/dri2xhtml-osu
 	url = git@github.com:umlso/dri2xhtml-osu.git
+[submodule "dspace-xmlui/src/main/webapp/static"]
+	path = dspace-xmlui/src/main/webapp/static
+	url = git@github.com:umlso/mospace_static.git
