@@ -17,17 +17,17 @@
 
 		There are a few exceptions to this naming format,
 		1) Some general keys are in the xmlui.general namespace
-		   because they are used very frequently.
+			because they are used very frequently.
 		2) Some general keys which are specific to a particular aspect
-		   may be found at xmlui.<Aspect> without specifying a
-		   particular java class.
+			may be found at xmlui.<Aspect> without specifying a
+			particular java class.
 		-->
 
 	<!-- General keys -->
-	<message key="xmlui.general.dspace_home">DSpace Home</message>
+	<message key="xmlui.general.dspace_home">MOspace Home</message>
 	<message key="xmlui.general.search">Search</message>
 	<message key="xmlui.general.go">Go</message>
-	<message key="xmlui.general.go_home">Go to DSpace home</message>
+	<message key="xmlui.general.go_home">Go to MOspace home</message>
 	<message key="xmlui.general.save">Save</message>
 	<message key="xmlui.general.cancel">Cancel</message>
 	<message key="xmlui.general.return">Return</message>
@@ -50,7 +50,7 @@
 
 
 	<!--
-	   The "utils" non-aspect
+		The "utils" non-aspect
        -->
     <message key="xmlui.utils.AuthenticationUtil.onlyAdmins">Only site administrators may assume login as another user.</message>
     <message key="xmlui.utils.AuthenticationUtil.onlyAuthenticatedAdmins">Only authenticated users who are administrators may assume the login as another user.</message>
@@ -60,21 +60,21 @@
 	<!--
 		This section is for feed syndications (RSS, atom, etc)
 	-->
-	<message key="xmlui.feed.general_description">The DSpace digital repository system captures, stores, indexes, preserves, and distributes digital research material.</message>
+	<message key="xmlui.feed.general_description">The MOspace digital repository system captures, stores, indexes, preserves, and distributes digital research material.</message>
     <message key="xmlui.feed.header">RSS Feeds</message>
 	<message key="xmlui.feed.logo_title">The Channel Image</message>
 	<message key="xmlui.feed.untitled">Untitled</message>
 
 	<!--
 		Default notice header
-	 	-->
+		-->
 	<message key="xmlui.general.notice.default_head">Notice</message>
 
 
 
 	<!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-		             ArtifactBrowser Aspect
+				ArtifactBrowser Aspect
 
 		!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
 
@@ -92,7 +92,7 @@
 	<message key="xmlui.ArtifactBrowser.AbstractSearch.head2">Communities or Collections matching your query</message>
 	<message key="xmlui.ArtifactBrowser.AbstractSearch.head3">Items matching your query</message>
 	<message key="xmlui.ArtifactBrowser.AbstractSearch.no_results">Search produced no results.</message>
-	<message key="xmlui.ArtifactBrowser.AbstractSearch.all_of_dspace">All of DSpace</message>
+	<message key="xmlui.ArtifactBrowser.AbstractSearch.all_of_dspace">All of MOspace</message>
 
    <message key="xmlui.ArtifactBrowser.AbstractSearch.sort_by.title">title</message>
    <message key="xmlui.ArtifactBrowser.AbstractSearch.sort_by.dateissued">issue date</message>
@@ -163,8 +163,12 @@
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.order.asc">ascending</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.order.desc">descending</message>
 
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.column_heading">Title</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.author.column_heading">Authors Name</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.subject.column_heading">Subject</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.discipline.column_heading">Theses Discipline</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.semester.column_heading">Theses Semester</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.advisor.column_heading">Theses Advisor</message>
 
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.author">Browsing {0} by Author {1}</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.author">Browsing {0} by Author</message>
@@ -172,8 +176,8 @@
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.subject">Browsing {0} by Subject {1}</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.subject">Browsing {0} by Subject</message>
 
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.item.title">Browsing {0} by Title {1}</message>
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.item.title">Browsing {0} by Title</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.title">Browsing {0} by Title {1}</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.title">Browsing {0} by Title</message>
 
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.item.dateissued">Browsing {0} by Issue Date {1}</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.item.dateissued">Browsing {0} by Issue Date</message>
@@ -181,10 +185,18 @@
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.item.dateaccessioned">Browsing {0} by Submit Date {1}</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.item.dateaccessioned">Browsing {0} by Submit Date</message>
 
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.discipline">Browsing {0} by Theses Discipline {1}</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.discipline">Browsing {0} by Theses Discipline</message>
+
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.semester">Browsing {0} by Theses Semester {1}</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.semester">Browsing {0} by Theses Semester</message>
+
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.advisor">Browsing {0} by Theses Advisor {1}</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.advisor">Browsing {0} by Theses Advisor</message>
 
 	<!-- org.dspace.app.xmlui.artifactbrowser.CollectionViewer.java -->
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.search_scope">Search Scope</message>
-	<message key="xmlui.ArtifactBrowser.CollectionViewer.all_of_dspace">All of DSpace</message>
+	<message key="xmlui.ArtifactBrowser.CollectionViewer.all_of_dspace">All of MOspace</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.full_text_search">Search within this collection:</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.head_browse">Browse by</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.browse_titles">Titles</message>
@@ -196,12 +208,12 @@
 	<!-- org.dspace.app.xmlui.artifactbrowser.CommunityBrowser.java -->
 	<message key="xmlui.ArtifactBrowser.CommunityBrowser.title">Community List</message>
 	<message key="xmlui.ArtifactBrowser.CommunityBrowser.trail">Community List</message>
-	<message key="xmlui.ArtifactBrowser.CommunityBrowser.head">Communities in DSpace</message>
+	<message key="xmlui.ArtifactBrowser.CommunityBrowser.head">Communities in MOspace</message>
 	<message key="xmlui.ArtifactBrowser.CommunityBrowser.select">Select a community to browse its collections.</message>
 
 	<!-- org.dspace.app.xmlui.artifactbrowser.CommunityViewer.java -->
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.search_scope">Search Scope</message>
-	<message key="xmlui.ArtifactBrowser.CommunityViewer.all_of_dspace">All of DSpace</message>
+	<message key="xmlui.ArtifactBrowser.CommunityViewer.all_of_dspace">All of MOspace</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.full_text_search">Search within this community and its collections:</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.head_browse">Browse by</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.browse_titles">Titles</message>
@@ -226,7 +238,7 @@
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.title">Give feedback</message>
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.trail">Give feedback</message>
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.head">Give feedback</message>
-	<message key="xmlui.ArtifactBrowser.FeedbackForm.para1">Thanks for sharing your feedback about the DSpace system. Your comments are appreciated!</message>
+	<message key="xmlui.ArtifactBrowser.FeedbackForm.para1">Thanks for sharing your feedback about the MOspace system. Your comments are appreciated!</message>
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.email">Your Email</message>
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.email_help">This address will be used to follow up on your feedback.</message>
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.comments">Comments</message>
@@ -239,8 +251,8 @@
 	<message key="xmlui.ArtifactBrowser.FeedbackSent.para1">Your comments have been received.</message>
 
 	<!-- org.dspace.app.xmlui.artifactbrowser.FrontPageSearch.java -->
-	<message key="xmlui.ArtifactBrowser.FrontPageSearch.head">Search DSpace</message>
-	<message key="xmlui.ArtifactBrowser.FrontPageSearch.para1">Enter some text in the box below to search DSpace.</message>
+	<message key="xmlui.ArtifactBrowser.FrontPageSearch.head">Search MOpace</message>
+	<message key="xmlui.ArtifactBrowser.FrontPageSearch.para1">Enter some text in the box below to search MOspace.</message>
 
 	<!-- org.dspace.app.xmlui.artifactbrowser.ItemViewer.java -->
 	<message key="xmlui.ArtifactBrowser.ItemViewer.trail">View Item</message>
@@ -252,7 +264,7 @@
 
 	<!-- org.dspace.app.xmlui.artifactbrowser.Navigation.java -->
 	<message key="xmlui.ArtifactBrowser.Navigation.head_browse">Browse</message>
-	<message key="xmlui.ArtifactBrowser.Navigation.head_all_of_dspace">All of DSpace</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.head_all_of_dspace">All of MOpace</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.communities_and_collections">Communities &amp; Collections</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_title">Titles</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_author">Authors</message>
@@ -315,7 +327,7 @@
 
 	<!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-		                EPerson Aspect
+						EPerson Aspect
 
 		!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
 
@@ -392,7 +404,7 @@
 	<!-- org.dspace.app.xmlui.eperson.PasswordLogin.java -->
 	<message key="xmlui.EPerson.PasswordLogin.title">Sign in</message>
 	<message key="xmlui.EPerson.PasswordLogin.trail">Sign in</message>
-	<message key="xmlui.EPerson.PasswordLogin.head1">Sign in to DSpace</message>
+	<message key="xmlui.EPerson.PasswordLogin.head1">Sign in to MOpace</message>
 	<message key="xmlui.EPerson.PasswordLogin.title">Sign in</message>
 	<message key="xmlui.EPerson.PasswordLogin.email_address">E-Mail Address</message>
 	<message key="xmlui.EPerson.PasswordLogin.error_bad_login">The email address and/or password supplied were not valid.</message>
@@ -406,7 +418,7 @@
 	<!-- org.dspace.app.xmlui.eperson.LDAPLogin.java -->
 	<message key="xmlui.EPerson.LDAPLogin.title">Sign in</message>
 	<message key="xmlui.EPerson.LDAPLogin.trail">Sign in</message>
-	<message key="xmlui.EPerson.LDAPLogin.head1">Sign in to DSpace</message>
+	<message key="xmlui.EPerson.LDAPLogin.head1">Sign in to MOspace</message>
 	<message key="xmlui.EPerson.LDAPLogin.title">Sign in</message>
 	<message key="xmlui.EPerson.LDAPLogin.username">User Name</message>
 	<message key="xmlui.EPerson.LDAPLogin.error_bad_login">The user name and/or password supplied were not valid.</message>
@@ -446,7 +458,7 @@
 	<!-- org.dspace.app.xmlui.eperson.RegistrationFinished.java -->
 	<message key="xmlui.EPerson.RegistrationFinished.title">Registration finished</message>
 	<message key="xmlui.EPerson.RegistrationFinished.head">Registration Finished</message>
-	<message key="xmlui.EPerson.RegistrationFinished.para1">You're now registered to use the DSpace system.  You can subscribe to collections to receive email updates about new items.</message>
+	<message key="xmlui.EPerson.RegistrationFinished.para1">You're now registered to use the MOpace system.  You can subscribe to collections to receive email updates about new items.</message>
 
 	<!-- org.dspace.app.xmlui.eperson.ResetPassword.java -->
 	<message key="xmlui.EPerson.ResetPassword.title">Reset password</message>
@@ -462,7 +474,7 @@
 	<!-- org.dspace.app.xmlui.eperson.StartForgotPassword.java -->
 	<message key="xmlui.EPerson.StartForgotPassword.title">Forgot Password</message>
 	<message key="xmlui.EPerson.StartForgotPassword.head">Forgot Password</message>
-	<message key="xmlui.EPerson.StartForgotPassword.para1">Enter the email address you provided when you registered with DSpace. An email will be sent to that address with further instructions.</message>
+	<message key="xmlui.EPerson.StartForgotPassword.para1">Enter the email address you provided when you registered with MOspace. An email will be sent to that address with further instructions.</message>
 	<message key="xmlui.EPerson.StartForgotPassword.email_address">Email Address</message>
 	<message key="xmlui.EPerson.StartForgotPassword.email_address_help">Enter the same address used when registering.</message>
 	<message key="xmlui.EPerson.StartForgotPassword.error_not_found">Email address not found.</message>
@@ -493,7 +505,7 @@
 
 	<!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-		               Submission Aspect
+						Submission Aspect
 
 		!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
 
@@ -504,8 +516,8 @@
 
 
 	<!-- general submission aspect messages -->
-	<message key="xmlui.Submission.general.mydspace_home">MyDSpace Home</message>
-	<message key="xmlui.Submission.general.go_mydspace">Go to MyDSpace Home</message>
+	<message key="xmlui.Submission.general.mydspace_home">MyMOpace Home</message>
+	<message key="xmlui.Submission.general.go_mydspace">Go to MyMOspace Home</message>
 	<message key="xmlui.Submission.general.submission.title">Item submission</message>
 	<message key="xmlui.Submission.general.submission.trail">Item submission</message>
 	<message key="xmlui.Submission.general.submission.head">Item submission</message>
@@ -583,7 +595,7 @@
 	<message key="xmlui.Submission.Submissions.status_unknown">Unknown state</message>
         <!-- Same transformer, completed submissions section -->
         <message key="xmlui.Submission.Submissions.completed.head">Archived Submissions</message>
-        <message key="xmlui.Submission.Submissions.completed.info">These are your completed submissions which have been accepted into DSpace.</message>
+        <message key="xmlui.Submission.Submissions.completed.info">These are your completed submissions which have been accepted into MOpace.</message>
         <message key="xmlui.Submission.Submissions.completed.column1">Date accepted</message>
         <message key="xmlui.Submission.Submissions.completed.column2">Title</message>
         <message key="xmlui.Submission.Submissions.completed.column3">Collection</message>
@@ -789,7 +801,7 @@
 
 	<!-- org.dspace.app.xmlui.Submission.submit.LicenseStep -->
 	<message key="xmlui.Submission.submit.LicenseStep.head">Distribution License</message>
-	<message key="xmlui.Submission.submit.LicenseStep.info1"><strong>There is one last step:</strong> In order for DSpace to reproduce, translate and distribute your submission worldwide, you must agree to the following terms.</message>
+	<message key="xmlui.Submission.submit.LicenseStep.info1"><strong>There is one last step:</strong> In order for MOspace to reproduce, translate and distribute your submission worldwide, you must agree to the following terms.</message>
 	<message key="xmlui.Submission.submit.LicenseStep.info2">Grant the standard distribution license by selecting 'I Grant the License'; and then click 'Complete Submission'.</message>
 	<message key="xmlui.Submission.submit.LicenseStep.info3">If you have questions regarding this license please contact the system administrators.</message>
 	<message key="xmlui.Submission.submit.LicenseStep.decision_label">Distribution license</message>
@@ -835,7 +847,7 @@
 
 	<!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-		             Administrative Aspect
+					Administrative Aspect
 
 		!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
 
@@ -1178,7 +1190,7 @@
 	<!-- org.dspace.app.xmlui.administrative.registries.MetadatRegistryMain.java -->
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.title">Metadata Registry</message>
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.head1">Metadata registry</message>
-	<message key="xmlui.administrative.registries.MetadataRegistryMain.para1">The metadata registry maintains a list of all metadata fields available in the repository. These fields may be divided amongst multiple schemas.  However, DSpace requires the qualified Dublin Core schema. You may extend the Dublin Core schema with additional fields or add new schemas to the registry.</message>
+	<message key="xmlui.administrative.registries.MetadataRegistryMain.para1">The metadata registry maintains a list of all metadata fields available in the repository. These fields may be divided amongst multiple schemas.  However, MOpace requires the qualified Dublin Core schema. You may extend the Dublin Core schema with additional fields or add new schemas to the registry.</message>
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.column1"></message>
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.column2">ID</message>
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.column3">Namespace</message>
@@ -1662,7 +1674,7 @@
 	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.trail">Harvesting</message>
 	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.options_harvest">Content Source</message>
 	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.label_source">Content source</message>
-	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.source_normal">This is a standard DSpace collection</message>
+	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.source_normal">This is a standard MOspace collection</message>
 	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.source_harvested">This collection harvests its content from an external source</message>
 	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.submit_save">Save</message>
 
@@ -1796,7 +1808,7 @@
 	<message key="xmlui.administrative.ControlPanel.trail">Control panel</message>
 	<message key="xmlui.administrative.ControlPanel.head">Control Panel</message>
 	<message key="xmlui.administrative.ControlPanel.option_java">Java Information</message>
-	<message key="xmlui.administrative.ControlPanel.option_dspace">DSpace Configuration</message>
+	<message key="xmlui.administrative.ControlPanel.option_dspace">MOspace Configuration</message>
 	<message key="xmlui.administrative.ControlPanel.option_alerts">System-wide Alerts</message>
 	<message key="xmlui.administrative.ControlPanel.hours">{0} h</message>
 	<message key="xmlui.administrative.ControlPanel.minutes">{0} m</message>
@@ -1821,7 +1833,7 @@
         <message key="xmlui.administrative.ControlPanel.cocoon_cache_clear">(Clear Cache Immediately)</message>
         <message key="xmlui.administrative.ControlPanel.cocoon_persistent_cache_size">Persistent Cache Size ({0})</message>
         <message key="xmlui.administrative.ControlPanel.cocoon_transient_cache_size">Transient Cache Size ({0})</message>
-	<message key="xmlui.administrative.ControlPanel.dspace_head">DSpace Settings</message>
+	<message key="xmlui.administrative.ControlPanel.dspace_head">MOpace Settings</message>
         <message key="xmlui.administrative.ControlPanel.dspace_version">DSpace Version</message>
 	<message key="xmlui.administrative.ControlPanel.dspace_dir">DSpace Installation Directory</message>
 	<message key="xmlui.administrative.ControlPanel.dspace_url">DSpace Base URL</message>
@@ -1885,7 +1897,7 @@
         <!-- System-wide Curation Tasks form (org.dspace.app.xmlui.aspect.administrative.CurateForm) -->
         <message key="xmlui.administrative.CurateForm.title">System Curation Tasks</message>
         <message key="xmlui.administrative.CurateForm.trail">Curation Tasks</message>
-        <message key="xmlui.administrative.CurateForm.object_label_name">Handle of DSpace Object</message>
+        <message key="xmlui.administrative.CurateForm.object_label_name">Handle of MOspace Object</message>
         <message key="xmlui.administrative.CurateForm.object_hint">Hint: Enter [your-handle-prefix]/0 to run a task across entire site (not all tasks may support this capability)</message>
         <message key="xmlui.administrative.CurateForm.task_label_name">Task</message>
     <!-- Used by Curate<DSO>Form classes also -->
@@ -1968,7 +1980,7 @@
 
 	<!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-		                  dri2xhtml
+							dri2xhtml
 
 		!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
 
@@ -1992,7 +2004,7 @@
 	<message key="xmlui.dri2xhtml.structural.contact-link">Contact Us</message>
 	<message key="xmlui.dri2xhtml.structural.feedback-link">Send Feedback</message>
 
-	<message key="xmlui.dri2xhtml.structural.head-subtitle">DSpace/Manakin Repository</message>
+	<message key="xmlui.dri2xhtml.structural.head-subtitle">MOspace/Manakin Repository</message>
 
 	<message key="xmlui.dri2xhtml.structural.profile">Profile: </message>
 	<message key="xmlui.dri2xhtml.structural.logout">Logout</message>

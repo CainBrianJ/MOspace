@@ -30,3 +30,7 @@ META-INF/
 ## Ignore all *.properties file, EXCEPT build.properties (the default)
 *.properties
 !build.properties
+
+
+## Ignore any patch files waiting to be applied
+*.patch
