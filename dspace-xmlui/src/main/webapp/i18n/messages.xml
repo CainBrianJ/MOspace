@@ -166,7 +166,7 @@
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.column_heading">Title</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.author.column_heading">Authors Name</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.subject.column_heading">Subject</message>
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.discipline.column_heading">Theses Discipline</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.discipline.column_heading">Theses Department</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.semester.column_heading">Theses Semester</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.advisor.column_heading">Theses Advisor</message>
 
@@ -188,8 +188,8 @@
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.item.dateaccessioned">Browsing {0} by Submit Date {1}</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.item.dateaccessioned">Browsing {0} by Submit Date</message>
 
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.discipline">Browsing {0} by Theses Discipline {1}</message>
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.discipline">Browsing {0} by Theses Discipline</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.discipline">Browsing {0} by Theses Deparment {1}</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.discipline">Browsing {0} by Theses Department</message>
 
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.semester">Browsing {0} by Theses Semester {1}</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.semester">Browsing {0} by Theses Semester</message>
@@ -274,7 +274,7 @@
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_subject">Subjects</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_dateissued">By Issue Date</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_dateaccessioned">By Submit Date</message>
-	<message key="xmlui.ArtifactBrowser.Navigation.browse_discipline">Theses Discipline</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.browse_discipline">Theses Department</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_semester">Theses Semester</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_advisor">Theses Advisor</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.head_this_collection">This Collection</message>
