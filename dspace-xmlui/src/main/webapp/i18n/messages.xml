@@ -260,8 +260,8 @@
 	<!-- org.dspace.app.xmlui.artifactbrowser.ItemViewer.java -->
 	<message key="xmlui.ArtifactBrowser.ItemViewer.trail">View Item</message>
 	<message key="xmlui.ArtifactBrowser.ItemViewer.head_parent_collections">This item appears in the following Collection(s)</message>
-	<message key="xmlui.ArtifactBrowser.ItemViewer.show_simple">Show simple item record</message>
-	<message key="xmlui.ArtifactBrowser.ItemViewer.show_full">Show full item record</message>
+	<message key="xmlui.ArtifactBrowser.ItemViewer.show_simple">[-] show simple item record</message>
+	<message key="xmlui.ArtifactBrowser.ItemViewer.show_full">[+] show full item record</message>
 
         <message key="xmlui.ArtifactBrowser.ItemViewer.withdrawn">This item has been withdrawn and is no longer available.</message>
 
@@ -2198,7 +2198,7 @@
      - JavaScript (AJAX) that completes the lookup popup window.
      - So, positional parameters are @1@, @2@, etc.
     -->
-  <message key="xmlui.ChoiceLookupTransformer.title">DSpace Value Lookup</message>
+  <message key="xmlui.ChoiceLookupTransformer.title">MOspace Value Lookup</message>
   <message key="xmlui.ChoiceLookupTransformer.accept">Accept</message>
   <message key="xmlui.ChoiceLookupTransformer.add">Add</message>
   <message key="xmlui.ChoiceLookupTransformer.cancel">Cancel</message>
@@ -2294,4 +2294,35 @@
     <message key="xmlui.aspect.versioning.VersionNoticeTransformer.notice.workflow_version_help">A more recent version of this item is in the Workflow.</message>
 
     <!-- End Versioning -->
+
+       	<!-- OSU: Simple item record field labels 
+        (.* removed from contributor and rights for syntax reasons)
+        -->
+
+	<message key="metadata.dc.identifier.citation">Citation</message>
+	<message key="metadata.dc.identifier.doi">DOI</message>
+	<message key="metadata.dc.identifier.govdoc">Gov't Doc #</message>
+	<message key="metadata.dc.identifier.isbn">ISBN</message>
+	<message key="metadata.dc.identifier.ismn">ISMN</message>
+	<message key="metadata.dc.identifier.issn">ISSN</message>
+    <message key="metadata.dc.identifier.other">Other Identifiers</message>
+	<message key="metadata.dc.identifier.tgn">TGN</message>
+	<message key="metadata.dc.identifier.uri">URI</message>
+	<message key="metadata.dc.publisher">Publisher</message>
+	<message key="metadata.dc.relation">Related Item</message>
+    <message key="metadata.dc.relation.hasversion">View Online Version</message>
+	<message key="metadata.dc.relation.ispartofseries">Series/Report no.</message>
+	<message key="metadata.dc.relation.issupplementedby">Supplementary Item</message>
+	<message key="metadata.dc.rights">Rights</message>
+	<message key="metadata.dc.source.uri">MERLIN Library Catalog</message>
+	<message key="metadata.dc.subject">Keywords</message>
+	<message key="metadata.dc.subject.lcsh">Subjects (LCSH)</message>
+	<message key="metadata.dc.subject.other">Subjects (Other)</message>
+	<message key="metadata.dc.subject.nalt">Subjects (NALT)</message>
+	<message key="metadata.dc.title">Title</message>
+	<message key="metadata.dc.title.alternative">Other Titles</message>
+	<message key="metadata.dc.type">Type</message>
+	<message key="metadata.dc.contributor.ALL">Author</message>
+	<message key="metadata.dc.date.issued">Date</message>
+
 </catalogue>
