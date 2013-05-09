@@ -575,31 +575,27 @@ public class BitstreamReader extends AbstractReader implements Recyclable
 
         ByteRange byteRange = null;
 
-        // Turn off partial downloads, they cause problems
-        // and are only rarely used. Specifically some windows pdf
-        // viewers are incapable of handling this request. You can
-        // uncomment the following lines to turn this feature back on.
-
-//        response.setHeader("Accept-Ranges", "bytes");
-//        String ranges = request.getHeader("Range");
-//        if (ranges != null)
-//        {
-//            try
-//            {
-//                ranges = ranges.substring(ranges.indexOf('=') + 1);
-//                byteRange = new ByteRange(ranges);
-//            }
-//            catch (NumberFormatException e)
-//            {
-//                byteRange = null;
-//                if (response instanceof HttpResponse)
-//                {
-//                    // Respond with status 416 (Request range not
-//                    // satisfiable)
-//                    response.setStatus(416);
-//                }
-//            }
-//        }
+		// re-enable partial downloads, caution be damned
+        response.setHeader("Accept-Ranges", "bytes");
+        String ranges = request.getHeader("Range");
+        if (ranges != null)
+        {
+            try
+            {
+                ranges = ranges.substring(ranges.indexOf('=') + 1);
+                byteRange = new ByteRange(ranges);
+            }
+            catch (NumberFormatException e)
+            {
+                byteRange = null;
+                if (response instanceof HttpResponse)
+                {
+                    // Respond with status 416 (Request range not
+                    // satisfiable)
+                    response.setStatus(416);
+                }
+            }
+        }
 
         try
         {
