@@ -360,36 +360,36 @@ it, please enter the types and the actual numbers or codes below.</hint>
        <stored-value></stored-value>
      </pair>
      <pair>
-       <displayed-value>English (United States)</displayed-value>
-       <stored-value>en_US</stored-value>
-      </pair>
-     <pair>
        <displayed-value>English</displayed-value>
-       <stored-value>en</stored-value>
+       <stored-value>eng</stored-value>
      </pair>
      <pair>
        <displayed-value>Spanish</displayed-value>
-       <stored-value>es</stored-value>
+       <stored-value>spa</stored-value>
      </pair>
      <pair>
        <displayed-value>German</displayed-value>
-       <stored-value>de</stored-value>
+       <stored-value>ger</stored-value>
      </pair>
      <pair>
        <displayed-value>French</displayed-value>
-       <stored-value>fr</stored-value>
+       <stored-value>fre</stored-value>
      </pair>
      <pair>
        <displayed-value>Italian</displayed-value>
-       <stored-value>it</stored-value>
+       <stored-value>ita</stored-value>
      </pair>
      <pair>
        <displayed-value>Japanese</displayed-value>
-       <stored-value>ja</stored-value>
+       <stored-value>jpn</stored-value>
      </pair>
      <pair>
        <displayed-value>Chinese</displayed-value>
-       <stored-value>zh</stored-value>
+       <stored-value>chi</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Korean</displayed-value>
+       <stored-value>kor</stored-value>
      </pair>
      <pair>
        <displayed-value>(Other)</displayed-value>
