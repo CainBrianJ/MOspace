@@ -531,7 +531,7 @@ public class ElasticSearchLogger {
     // Node Client will discover other ES nodes running in local JVM
     public Client createNodeClient(ClientType clientType) {
         String dspaceDir = ConfigurationManager.getProperty("dspace.dir");
-        Settings settings = ImmutableSettings.settingsBuilder().put("path.data", dspaceDir + "/elasticsearch/").build();
+        Settings settings = ImmutableSettings.settingsBuilder().put("path.data", dspaceDir + "/elasticsearch/").put("network.host", "_local_").build();
         
         NodeBuilder nodeBuilder = NodeBuilder.nodeBuilder().clusterName(clusterName).data(true).settings(settings);
 
