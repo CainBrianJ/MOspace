@@ -35,3 +35,6 @@ META-INF/
 
 ## Ignore any patch files waiting to be applied
 *.patch
+
+## Ignore .DS_Store files placed by Mac OSX
+*.DS_Store
