@@ -63,6 +63,32 @@ collections / items / and bitstreams.
                 <map:serialize type="xml"/>
             </map:match>
 
+
+            <map:match pattern="pages/add">
+              <map:act type="DSpacePropertyFileReader">
+                <map:parameter name="dspace.dir" value="dspace.dir" />
+                <map:transform type="Include" src="file://{dspace.dir}/config/pages/add.xml" />
+              </map:act>
+              <map:serialize type="xml"/>
+            </map:match>
+
+            <map:match pattern="pages/help">
+              <map:act type="DSpacePropertyFileReader">
+                <map:parameter name="dspace.dir" value="dspace.dir" />
+                <map:transform type="Include" src="file://{dspace.dir}/config/pages/help.xml" />
+              </map:act>
+              <map:serialize type="xml"/>
+            </map:match>
+
+            <map:match pattern="pages/about">
+              <map:act type="DSpacePropertyFileReader">
+                <map:parameter name="dspace.dir" value="dspace.dir" />
+                <map:transform type="Include" src="file://{dspace.dir}/config/pages/about.xml" />
+              </map:act>
+              <map:serialize type="xml"/>
+            </map:match>
+
+
             <!-- Browse (by anything) -->
             <map:match pattern="browse">
                     <map:transform type="ConfigurableBrowse"/>

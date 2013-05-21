@@ -194,13 +194,13 @@ For example:
 To search all of MOspace, use the search box at the top of the navigation bar on the left (or the search box in the middle of the home page).
 </p>
 <p>
-<figure source="../themes/mospace/images/help/searchtop.gif" />
+<figure source="../static/images/help/searchtop.gif" />
 </p>
 <p>
 To limit your search to a specific community or collection, navigate to that community or collection and use the search bar on that page.
 </p>
 <p>
-<figure source="../themes/mospace/images/help/searchother.gif" />
+<figure source="../static/images/help/searchother.gif" />
 </p>
 <p>[ <xref target="#top">back to top</xref> ]</p>
 </div>
@@ -236,41 +236,41 @@ The search engine ignores certain words that occur frequently in English, but do
 <head>What other options do I have when constructing my search?</head>
 
 <p><hi rend="bold">Truncation</hi> - Use an asterisk (*) after a word stem to get all hits having words starting with that root, for example:</p>
-<p><figure source="../themes/mospace/images/help/search1.gif"> select* </figure></p>
+<p><figure source="../static/images/help/search1.gif"> select* </figure></p>
 <p>will retrieve selects, selector, selectman, selecting.</p>
 
 <p><hi rend="bold">Stemming</hi> - The search engine automatically expands words with common endings to include plurals, past tenses ...etc.</p>
 
 <p><hi rend="bold">Phrase Searching</hi> - To search using multiple words as a phrase, put quotation marks (") around the phrase.</p>
 
-<p><figure source="../themes/mospace/images/help/search8.jpg"> "organizational change" </figure></p>
+<p><figure source="../static/images/help/search8.jpg"> "organizational change" </figure></p>
 
 <p><hi rend="bold">Exact word match</hi> - Put a plus (+) sign before a word if it MUST appear in the search result. For instance, in the following search the word "training" is optional, but the word "dog" must be in the result.
 </p>
-<p><figure source="../themes/mospace/images/help/search2.gif"> +dog training </figure></p>
+<p><figure source="../static/images/help/search2.gif"> +dog training </figure></p>
 
 <p><hi rend="bold">Eliminate items with unwanted words</hi> - Put a minus (-) sign before a word if it should not appear in the search results. Alternatively, you can use NOT. This can limit your search to eliminate unwanted hits. For instance, in the search
 </p>
-<p><figure source="../themes/mospace/images/help/search3.jpg"> training -cat </figure> or <figure source="../themes/mospace/images/help/search4.jpg"> training NOT cat </figure></p>
+<p><figure source="../static/images/help/search3.jpg"> training -cat </figure> or <figure source="../static/images/help/search4.jpg"> training NOT cat </figure></p>
 
 <p>you will get items containing the word "training", except those that also contain the word "cat".</p>
 
 <p><hi rend="bold">Boolean searching</hi> - The following Boolean operators can be used to combine terms. Note that they must be CAPITALIZED !</p>
 
 <p><hi rend="bold">AND</hi> - to limit searches to find items containing all words or phrases combined with this operator, e.g.</p>
-<p><figure source="../themes/mospace/images/help/search5.jpg"> cats AND dogs </figure></p>
+<p><figure source="../static/images/help/search5.jpg"> cats AND dogs </figure></p>
 <p>will retrieve all items that contain BOTH the words "cats" and "dogs".</p>
 
 <p><hi rend="bold">OR</hi> - to enlarge searches to find items containing any of the words or phrases surrounding this operator</p>
-<p><figure source="../themes/mospace/images/help/search6.jpg"> cats OR dogs </figure></p>
+<p><figure source="../static/images/help/search6.jpg"> cats OR dogs </figure></p>
 <p> will retrieve all items that contain EITHER the words "cats" or "dogs".</p>
 
 <p><hi rend="bold">NOT</hi> - to exclude items containing the word following this operator, e.g.</p>
-<p><figure source="../themes/mospace/images/help/search4.jpg"> training NOT cat </figure></p>
+<p><figure source="../static/images/help/search4.jpg"> training NOT cat </figure></p>
 <p>will retrieve all items that contain the word "training" EXCEPT those also containing the word "cat".</p>
 
 <p>Parentheses can be used in the search query to group search terms into sets, and operators can then be applied to the whole set, e.g. </p>
-<p><figure source="../themes/mospace/images/help/search7.jpg"> (cats OR dogs) AND (training OR discipline) </figure></p>
+<p><figure source="../static/images/help/search7.jpg"> (cats OR dogs) AND (training OR discipline) </figure></p>
 <p>[ <xref target="#top">back to top</xref> ]</p>
 </div>
 
