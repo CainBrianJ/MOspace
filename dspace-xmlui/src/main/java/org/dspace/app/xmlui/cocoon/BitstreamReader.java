@@ -575,8 +575,8 @@ public class BitstreamReader extends AbstractReader implements Recyclable
 
         ByteRange byteRange = null;
 
-		// re-enable partial downloads, caution be damned
-        response.setHeader("Accept-Ranges", "bytes");
+		// disable partial downloads, see #1048
+  /*      response.setHeader("Accept-Ranges", "bytes");
         String ranges = request.getHeader("Range");
         if (ranges != null)
         {
@@ -596,7 +596,7 @@ public class BitstreamReader extends AbstractReader implements Recyclable
                 }
             }
         }
-
+*/
         try
         {
             if (byteRange != null)
