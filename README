@@ -1,3 +1,46 @@
+ABOUT MOSPACE
+
+MOspace: UM's Digital Institutional Repository
+
+The MOspace DIR is based on this software:
+
+ * DSpace (a Tomcat servlet, the core application for MOspace)
+ * Handle (a Tomcat servlet, provides permanent URLs for MOspace)
+ * Apache (functions as a reverse proxy to Tomcat)
+ * Tomcat (a servlet container)
+ * Shibboleth (a single sign-on service, provided by Division of IT)
+
+(copied from https://mospace.umsystem.edu/xmlui/pages/about)
+
+MOspace is the digital institutional repository of the University of Missouri System, and is a joint initiative of the University Libraries, the Office of Library Systems, and the Division of Information Technology. It is a permanent digital storehouse of research and knowledge, focusing on works created by those connected with the University of Missouri. MOspace is place where faculty, staff and students can store their intellectual output, and depend upon a permanent URL.
+
+MOspace allows the library to preserve and provide open access to items in a more permanent way than posting to a website. The project uses DSpace, an open source application developed at MIT, which provides permanent URLs for documents deposited through it to the MOspace server. The Libraries are committed to this ongoing effort as part of the next generation of library collections.
+
+MOspace, in addition to acting as a preservation tool, is our part of the international open access movement. You have probably heard of the recent votes in favor of open access by Harvard's Faculty of Arts and Sciences, Stanford's School of Education, and other institutions and faculties. MOspace could even be a home for a new open access journal in the future.
+
+An important part of the MOspace effort is encouraging authors not to sign away rights to their own works, as often happens when they publish in commercial journals. Retaining the copyright allows content to be made available to students and scholars without huge subscription fees. In MOspace, the author/creator retains copyright in all cases, so an author could also publish an item elsewhere, providing that the publisher allows (see this author's addendum for an example addendum to a publisher's contract). For items not commercially published, author permission is all that is needed to allow the Library to add it to MOspace. Library staff can download items from websites or upload items directly via author submission. Authors can submit works directly to mospace@missouri.edu; most electronic formats are accepted for submission.
+
+Establishing MOspace is part of the crucial role libraries play in preserving research and scholarship in all forms and making knowledge accessible for future scholars.
+
+For more information, consult our help page, call 573-882-1685, or email mospace@missouri.edu. To get in touch with a MOspace representative from UMKC, call 816-235-2227 or email mospace@umkc.edu. To contact a Scholars' Mine representative from Missouri S&T, call 573-341-4221 or email scholarsmine@mst.edu.
+
+We look forward to receiving your submissions.
+
+WORKING WITH THIS SOFTWARE
+
+MOspace is based on a fork of DSpace repository software. MOspace generally follows the master branch of DSpace. If you are interested in contributing to the development of MOspace, you should first create your own fork of MOspace, and add DSpace:master as an upstream branch. Right now we keep multiple master branches around, one for each iteration of MOspace. Our current iteration branch is iteration3, but new development is going on in iteration4. So, also add an upstream tracking branch for whicher iteration you're currently using.
+
+Also, we utilize submodules a lot, so, once you clone a copy of the MOspace repository, you'll need to ensure submodules are initialized and up to date, by running the following commands at the top level of your checkout:
+
+git submodule init
+git submodule update
+
+It's a good idea to ensure that each submodule is also checked out on a branch, typically a branch that matches the branch of the parent repository, currently either mospace_iteration3 or mospace_iteration4.
+
+
+
+begin standard DSpace README content:
+
 Installation instructions are included in this release package under
 
  - dspace/docs/DSpace-Manual.pdf
