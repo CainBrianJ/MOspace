@@ -28,7 +28,7 @@ We look forward to receiving your submissions.
 
 WORKING WITH THIS SOFTWARE
 
-MOspace is based on a fork of DSpace repository software. MOspace generally follows the master branch of DSpace. If you are interested in contributing to the development of MOspace, you should first create your own fork of MOspace, and add DSpace:master as an upstream branch. Right now we keep multiple master branches around, one for each iteration of MOspace. Our current iteration branch is iteration3, but new development is going on in iteration4. So, also add an upstream tracking branch for whicher iteration you're currently using.
+MOspace is based on a fork of DSpace repository software. MOspace generally follows the master branch of DSpace. If you are interested in contributing to the development of MOspace, you should first create your own fork of MOspace, and add DSpace:master as an upstream branch. Right now we keep multiple master branches around, one for each iteration of MOspace. Our current iteration branch is iteration3, but new development is going on in iteration4. So, also add an upstream tracking branch for whichever iteration you're currently using.
 
 Also, we utilize submodules a lot, so, once you clone a copy of the MOspace repository, you'll need to ensure submodules are initialized and up to date, by running the following commands at the top level of your checkout:
 
