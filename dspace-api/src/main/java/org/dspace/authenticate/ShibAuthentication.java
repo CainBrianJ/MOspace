@@ -1074,20 +1074,67 @@ public class ShibAuthentication implements AuthenticationMethod
 	 * 
 	 * 
 	 * @param request The HTTP request to look for headers values on.
-	 * @param name The name of the header
+	 * @param names The name (or names) of the header(s) (can be multiple headers, comma-delimited)
 	 * @return The value of the header requested, or null if none found.
 	 */
-	private String findHeader(HttpServletRequest request, String name) {
-		if ( name == null ) {
+	private String findHeader(HttpServletRequest request, String names) {
+		if ( names == null ) {
 			return null;
 		}
-		String value = request.getHeader(name);
-		if (value == null)
-			value = request.getHeader(name.toLowerCase());
-		if (value == null)
-			value = request.getHeader(name.toUpperCase());
-		
-		return value;
+
+		// Use a StringBuffer to help with garbage collection later
+		StringBuffer BufferedValues = new StringBuffer();
+
+		int idx = 0;
+		do {
+			idx = names.indexOf(',',idx);
+
+			if ( idx == 0 ) { 
+				// if the string starts with a comma just remove it. This will
+				// prevent an endless loop in an error condition.
+				String name = names.substring(1,names.length());
+
+			} else if (idx > 0 && names.charAt(idx-1) == '\\' ) {
+				// The attribute starts with an escaped comma
+				idx++;
+			} else if ( idx > 0) {
+				// First extract the name and append it to BufferedValues.
+				String name = names.substring(0,idx);	
+				name = name.replaceAll("\\\\,", ",");
+
+				String value = request.getHeader(name);
+				if (value == null)
+					value = request.getHeader(name.toLowerCase());
+				if (value == null)
+					value = request.getHeader(name.toUpperCase());
+				if (value != null) {
+					BufferedValues.append(value);
+					BufferedValues.append(";");
+				}
+				// Next, remove the value from the string and continue to scan.
+				names = names.substring(idx+1,names.length());
+				idx = 0;
+			}
+		} while (idx >= 0);
+
+		// The last attribute will still be left on the names string, append it 
+		// to BufferedValues.
+		if (names.length() > 0) {
+			names = names.replaceAll("\\\\,", ",");
+
+				String value = request.getHeader(names);
+				if (value == null)
+					value = request.getHeader(names.toLowerCase());
+				if (value == null)
+					value = request.getHeader(names.toUpperCase());
+				if (value != null) {
+					BufferedValues.append(value);
+					BufferedValues.append(";");
+				}
+
+		}
+
+		return BufferedValues.toString();
 	}
 
 
