@@ -344,14 +344,14 @@
            Builds the Wijiti REST-API for DSpace
         -->
 		<profile>
-		   <id>dspace-rest</id>
+		   <id>dspace-rest-wijiti</id>
 			<activation>
 				<file>
 					<exists>dspace-rest-wijiti/pom.xml</exists>
 				</file>
 			</activation>
 			<modules>
-				<module>dspace-rest</module>
+				<module>dspace-rest-wijiti</module>
 			</modules>
 		</profile> 
 
