@@ -1,12 +1,6 @@
 [submodule "dspace-xmlui/src/main/webapp/themes/snazy"]
 	path = dspace-xmlui/src/main/webapp/themes/snazy
 	url = git@github.com:umlso/dspace-xmlui-theme-snazy.git
-[submodule "dspace-rest-wijiti"]
-	path = dspace-rest-wijiti
-	url = git@github.com:umlso/dspace-rest-wijiti.git
-[submodule "dspace-rest-hedtek"]
-	path = dspace-rest-hedtek
-	url = git@github.com:umlso/dspace-rest-hedtek.git
 [submodule "dspace-xmlui/src/main/webapp/themes/dri2xhtml-osu"]
 	path = dspace-xmlui/src/main/webapp/themes/dri2xhtml-osu
 	url = git@github.com:umlso/dri2xhtml-osu.git
