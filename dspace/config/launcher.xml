@@ -339,6 +339,7 @@
         </step>
     </command>
 
+<!--
      <command>
         <name>setup-database</name>
         <description>Create the database tables</description>
@@ -354,6 +355,7 @@
             <class>org.dspace.storage.rdbms.InitializeDatabase</class>
         </step>
     </command>
+-->
 
     <command>
         <name>test-email</name>
