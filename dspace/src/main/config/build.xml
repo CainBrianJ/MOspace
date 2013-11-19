@@ -191,7 +191,7 @@ Common usage:
     <!-- in the target directory, the new file is suffixed wth *.new   -->
     <!-- and should be hand updated afterward                .          -->
     <!-- ============================================================= -->
-    <target name="update_configs" depends="overwrite_configs,overwrite_solr_configs,copy_launcher-live_config" description="Updates the Configuration Directory">
+    <target name="update_configs" depends="overwrite_configs,overwrite_solr_configs" description="Updates the Configuration Directory">
     	<antcall target="init_geolite" />
     </target>
 
@@ -266,20 +266,6 @@ Common usage:
         </echo>
 
     </target>
-
-    <hostinfo prefix="thishost" />
-    <target name="test.if.we.are.running.on.live">
-        <condition property="running.on.live">
-            <and>
-                <thishost.NAME = "lso-digital-tc1">
-            </and>
-        </condition>
-    </target>
-    <target name="copy_launcher-live_config" if="running.on.live">
-            <copy file="${dspace.dir}/config/launcher-live.xml" tofile="${dspace.dir}/config/config/launcher.xml" preservelastmodified="true" overwrite="true" />
-    </target>
-
-
 
     <target name="copy_configs_keep" unless="${overwrite}" depends="prepare_configs">
 
@@ -893,7 +879,7 @@ Common usage:
     <!-- ============================================================= -->
     
     <target name="install_code"
-            depends="init_installation,init_configs,copy_launcher-live_config"
+            depends="init_installation,init_configs"
             description="Do a fresh install of the code, preserving any data."
             >
 

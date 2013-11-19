@@ -252,9 +252,13 @@ public class ScriptLauncher
     private static Document getConfig()
     {
         // Load the launcher configuration file
+	String launcherConfig = System.getProperty("launcherConfig", "launcher.xml") ;
+	if (launcherConfig == null) {
+		launcherConfig = "launcher.xml";
+	}
         String config = ConfigurationManager.getProperty("dspace.dir") +
                         System.getProperty("file.separator") + "config" +
-                        System.getProperty("file.separator") + "launcher.xml";
+                        System.getProperty("file.separator") + launcherConfig ;
         SAXBuilder saxBuilder = new SAXBuilder();
         Document doc = null;
         try
