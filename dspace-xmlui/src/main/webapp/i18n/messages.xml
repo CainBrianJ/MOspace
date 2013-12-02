@@ -2322,7 +2322,9 @@
 	<message key="metadata.dc.title">Title</message>
 	<message key="metadata.dc.title.alternative">Other Titles</message>
 	<message key="metadata.dc.type">Type</message>
-	<message key="metadata.dc.contributor.ALL">Author</message>
+	<message key="metadata.dc.creator">Author</message>
+	<message key="metadata.dc.contributor.author">Author</message>
+	<message key="metadata.dc.contributor.corporatename">Contributor</message>
 	<message key="metadata.dc.date.issued">Date</message>
 	<message key="metadata.dc.description">Description</message>
 	<message key="metadata.dc.description.abstract">Abstract</message>
