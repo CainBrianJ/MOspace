@@ -95,7 +95,15 @@
                <artifactId>ant</artifactId>
             </exclusion>
          </exclusions>
+       </dependency>
+  
+      <!-- Adding this dependency will install the nailgun server  --> 
+      <dependency>
+         <groupId>com.martiansoftware</groupId>
+         <artifactId>nailgun-server</artifactId>
+         <version>0.9.1</version>
       </dependency>
+
 
    </dependencies>
 
