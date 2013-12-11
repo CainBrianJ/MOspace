@@ -2324,6 +2324,7 @@
 	<message key="metadata.dc.type">Type</message>
 	<message key="metadata.dc.creator">Author</message>
 	<message key="metadata.dc.contributor.author">Author</message>
+	<message key="metadata.dc.contributor.facultyauthor">Faculty Author</message>
 	<message key="metadata.dc.contributor.corporatename">Contributor</message>
 	<message key="metadata.dc.date.issued">Date</message>
 	<message key="metadata.dc.description">Description</message>
